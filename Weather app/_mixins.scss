@@ -1,0 +1,21 @@
+// Header mixin
+@mixin flex-center($direction: row, $justify: space-between, $align: center, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+  }
+  
+  @mixin input-button-style($width, $color, $cursor: default) {
+    width: $width;
+    padding: $input-button-padding;
+    height: $input-button-height;
+    border-radius: $input-button-border-radius;
+    border: none;
+    background-color: $input-button-bg-color;
+    color: $color;
+    font-size: 9px;
+    outline: none;
+    cursor: $cursor;
+  }
