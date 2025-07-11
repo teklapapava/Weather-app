@@ -1,7 +1,4 @@
- //  Header Styles
-
- 
-.header {
+ .header {
   @include flex-center(row, space-around, center);
   padding: 20px;
   width: 90%;
@@ -22,6 +19,7 @@
 
     input {
       @include input-button-style(60%, white);
+      cursor: pointer;
     }
     
     button {
@@ -89,9 +87,16 @@ body.light-mode {
 
 
 body.dark-mode {
-  background-color: #020a14f8;
-  color: #ffffff;
-
+  // background-color: #020a14f8;
+  // background-color: red;
+  background-image: url(./photo/dark-mode.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  //  filter: brightness(0.6) grayscale(0.2);
+  
   .theme-toggle {
     .light-icon {
       display: none;

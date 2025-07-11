@@ -35,10 +35,10 @@
               >
               <h3 class="current-temperature">25&deg;C</h3>
 
-              <div class="main">
+              <div class="main">  
                 <div class="first">
                   <div class="weather-info">
-                    <img src="./photo/Humidity.png" alt="Humidity" />
+                    <img class="info-icon" src="./photo/Humidity.png" alt="Humidity" />
                     <div class="info-content">
                       <span class="info-label">Humidity</span>
                       <span class="info-value">45%</span>
@@ -391,7 +391,7 @@
                           d="M262.06,98.9c11.69,5.56,30.44,13.31,41.62,18.08,3.17,1.35,5.61,1.83,7.08,1.77,1.56-.06-2.8-1.99-6.06-3.38-11.18-4.77-29.92-12.52-41.62-18.08-7.61-3.61-7.38-7.3-5.95-9.55-.35.55-.7,1.11-1.02,1.61-1.43,2.25-1.66,5.94,9.55Z"
                           fill="#fff"
                           mix-blend-mode="soft-light"
-                        />
+                          />
                       </g>
                       <g>
                         <rect
@@ -760,178 +760,152 @@
         </aside>
       </section>
 
-
-
-
-
-
-
-
-
-
-      <section class="hourly-forecast-section">
+        <section class="hourly-forecast">
         <div class="forecast-header">
-          <span>Hourly Forecast</span>
+          <h3 class="hourly-forecast-title">Hourly Forecast</h3>
         </div>
-
+      
         <div class="hourly-forecast-list">
           <div class="forecast-item">
-            <span class="forecast-time">now</span>
-            <img class="forecast-icon" src="./photo/sun.png" alt="sun" />
-            <span class="forecast-temp">21°C</span>
+            <time class="forecast-item-time" datetime="00:00">Now</time>
+            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
+            <span class="forecast-item-temp">21°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">12PM</span>
-            <img class="forecast-icon" src="./photo/sun.png" alt="sun" />
-            <span class="forecast-temp">25°C</span>
+            <time class="forecast-item-time" datetime="12:00">12PM</time>
+            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
+            <span class="forecast-item-temp">25°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">1PM</span>
-            <img class="forecast-icon" src="./photo/sun.png" alt="sun" />
-            <span class="forecast-temp">26°C</span>
+            <time class="forecast-item-time" datetime="13:00">1PM</time>
+            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
+            <span class="forecast-item-temp">26°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">2PM</span>
-            <img class="forecast-icon" src="./photo/sun.png" alt="sun" />
-            <span class="forecast-temp">26°C</span>
+            <time class="forecast-item-time" datetime="14:00">2PM</time>
+            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
+            <span class="forecast-item-temp">26°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">3PM</span>
-            <img class="forecast-icon" src="./photo/sun.png" alt="sun" />
-            <span class="forecast-temp">25°C</span>
+            <time class="forecast-item-time" datetime="15:00">3PM</time>
+            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
+            <span class="forecast-item-temp">25°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">4PM</span>
-            <img
-              class="forecast-icon"
-              src="./photo/snst cluub and moon.png"
-              alt="sun"
-            />
-            <span class="forecast-temp">24°C</span>
+            <time class="forecast-item-time" datetime="16:00">4PM</time>
+            <img class="forecast-item-icon" src="./photo/snst cluub and moon.png" alt="Partly cloudy with moon" />
+            <span class="forecast-item-temp">24°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">5PM</span>
-            <img class="forecast-icon" src="./photo/cloud.png" alt="cloud" />
-            <span class="forecast-temp">23°C</span>
+            <time class="forecast-item-time" datetime="17:00">5PM</time>
+            <img class="forecast-item-icon" src="./photo/cloud.png" alt="Cloudy weather" />
+            <span class="forecast-item-temp">23°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">6PM</span>
-            <img class="forecast-icon" src="./photo/cloud.png" alt="cloud" />
-            <span class="forecast-temp">22°C</span>
+            <time class="forecast-item-time" datetime="18:00">6PM</time>
+            <img class="forecast-item-icon" src="./photo/cloud.png" alt="Cloudy weather" />
+            <span class="forecast-item-temp">22°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">7PM</span>
-            <img class="forecast-icon" src="./photo/cloud.png" alt="cloud" />
-            <span class="forecast-temp">21°C</span>
+            <time class="forecast-item-time" datetime="19:00">7PM</time>
+            <img class="forecast-item-icon" src="./photo/cloud.png" alt="Cloudy weather" />
+            <span class="forecast-item-temp">21°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">8PM</span>
-            <img
-              class="forecast-icon"
-              src="./photo/cloud and moon.png"
-              alt="cloud"
-            />
-            <span class="forecast-temp">20°C</span>
+            <time class="forecast-item-time" datetime="20:00">8PM</time>
+            <img class="forecast-item-icon" src="./photo/cloud and moon.png" alt="Cloudy night" />
+            <span class="forecast-item-temp">20°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">9PM</span>
-            <img
-              class="forecast-icon"
-              src="./photo/cloud and moon.png"
-              alt="cloud"
-            />
-            <span class="forecast-temp">19°C</span>
+            <time class="forecast-item-time" datetime="21:00">9PM</time>
+            <img class="forecast-item-icon" src="./photo/cloud and moon.png" alt="Cloudy night" />
+            <span class="forecast-item-temp">19°C</span>
           </div>
         </div>
-      </section>
-
-      <section class="hourly-forecast-section">
-        <div class="forecast-header">
-          <span> Forecast</span>
-          <div class="time-options">
-            <span> 1 Week</span>
-            <span> 2 Weeks</span>
-            <span> 1 Month</span>
+      </section>  
+      
+      <section class="forecast-section">
+        <div class="forecast-section-header">
+          <h2 class="forecast-section-title">Forecast</h2> <div class="time-options">
+            <span class="time-options-item time-options__item--active" role="button" tabindex="0">1 Week</span>
+            <span class="time-options-item" role="button" tabindex="0">2 Weeks</span>
+            <span class="time-options-item" role="button" tabindex="0">1 Month</span>
           </div>
         </div>
-
-        <div class="hourly-forecast-list-daily">
+      
+        <div class="daily-forecast-list">
           <div class="forecast-item">
-            <span class="forecast-time">Thu, Jun 29</span>
-            <img class="forecast-icon" src="./photo/sun.png" alt="sun" />
-            <span class="forecast-temp">27°C</span>
-            <span class="forecast-temp-night">18°C</span>
+            <time class="forecast-item-time" datetime="2025-06-30">Thu, Jun 29</time>
+            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
+            <span class="forecast-item-temp forecast-item__temp--day">25°C</span>
+            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">Fri, Jun 30</span>
-            <img class="forecast-icon" src="./photo/cloud.png" alt="cloud" />
-            <span class="forecast-temp">25°C</span>
-            <span class="forecast-temp-night">18°C</span>
+            <time class="forecast-item-time" datetime="2025-06-30">Fri, Jun 30</time>
+            <img class="forecast-item-icon" src="./photo/cloud.png" alt="Cloudy weather" />
+            <span class="forecast-item-temp forecast-item__temp--day">25°C</span>
+            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">Sat, Jul 1</span>
-            <img class="forecast-icon" src="./photo/rain.png" alt="rain" />
-            <span class="forecast-temp">26°C</span>
-            <span class="forecast-temp-night">18°C</span>
+            <time class="forecast-item-time" datetime="2025-07-01">Sat, Jul 1</time>
+            <img class="forecast-item-icon" src="./photo/rain.png" alt="Rainy weather" />
+            <span class="forecast-item-temp forecast-item__temp--day">26°C</span>
+            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">Sun, Jul 2</span>
-            <img class="forecast-icon" src="./photo/rain.png" alt="rain" />
-            <span class="forecast-temp">26°C</span>
-            <span class="forecast-temp-night">18°C</span>
+            <time class="forecast-item-time" datetime="2025-07-02">Sun, Jul 2</time>
+            <img class="forecast-item-icon" src="./photo/rain.png" alt="Rainy weather" />
+            <span class="forecast-item-temp forecast-item__temp--day">26°C</span>
+            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">Mon, Jul 3</span>
-            <img class="forecast-icon" src="./photo/cloud.png" alt="cloud" />
-            <span class="forecast-temp">25°C</span>
-            <span class="forecast-temp-night">18°C</span>
+            <time class="forecast-item-time" datetime="2025-07-03">Mon, Jul 3</time>
+            <img class="forecast-item-icon" src="./photo/cloud.png" alt="Cloudy weather" />
+            <span class="forecast-item-temp forecast-item__temp--day">25°C</span>
+            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">Tue, Jul 4</span>
-            <img
-              class="forecast-icon"
-              src="./photo/snst cluub and moon.png"
-              alt="sun"
-            />
-            <span class="forecast-temp">24°C</span>
-            <span class="forecast-temp-night">18°C</span>
+            <time class="forecast-item-time" datetime="2025-07-04">Tue, Jul 4</time>
+            <img class="forecast-item-icon" src="./photo/snst cluub and moon.png" alt="Partly cloudy with moon" />
+            <span class="forecast-item-temp forecast-item__temp--day">24°C</span>
+            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">Wed, Jul 5</span>
-            <img class="forecast-icon" src="./photo/sun.png" alt="sun" />
-            <span class="forecast-temp">23°C</span>
-            <span class="forecast-temp-night">18°C</span>
+            <time class="forecast-item-time" datetime="2025-07-05">Wed, Jul 5</time>
+            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
+            <span class="forecast-item-temp forecast-item__temp--day">23°C</span>
+            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
           </div>
-
+      
           <div class="forecast-item">
-            <span class="forecast-time">Wed, Jul 5</span>
-            <img class="forecast-icon" src="./photo/sun.png" alt="sun" />
-            <span class="forecast-temp">22°C</span>
-            <span class="forecast-temp-night">18°C</span>
+            <time class="forecast-item-time" datetime="2025-07-05">Wed, Jul 5</time>
+            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
+            <span class="forecast-item-temp forecast-item__temp--day">22°C</span>
+            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <span class="footer__credit">Powered by OpenWeatherMap</span>
-      <span class="footer__copyright"
+      <span class="footer-credit">Powered by OpenWeatherMap</span>
+      <span class="footer-copyright"
         >© 2025 WeatherNow. All rights reserved.</span
       >
     </footer>

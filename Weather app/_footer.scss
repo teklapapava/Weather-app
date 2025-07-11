@@ -1,0 +1,15 @@
+.footer {
+    padding: 1rem 2rem;
+    border-top: 1px solid #ddd;
+    margin-top: 70px;
+  
+    @include flex-center($direction: column, $justify: center, $align: center, $gap: 10px);
+  
+    .footer-credit {
+      @include text-style(rgba(75, 85, 99, 1), 14px);
+    }
+  
+    .footer-copyright {
+      @include text-style(rgba(107, 114, 128, 1), 12px);
+    }
+  }
