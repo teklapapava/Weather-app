@@ -7,95 +7,107 @@
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-    <header class="header">
-      <img src="./photo/Container.png" alt="logo" class="logo" />
+    <!-- <div id="loader" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(255,255,255,0.7); z-index:9999; display:flex; align-items:center; justify-content:center;">
+      <div style="border: 8px solid #f3f3f3; border-top: 8px solid #3498db; border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite;"></div>
+    </div>
+    <style> -->
+      <!-- @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      } -->
+    </style>
+    <div id="app-content">
+      <header class="header">
+        <img src="./photo/Container.png" alt="logo" class="logo" />
 
-      <div class="search-bar">
-        <input type="text" id="cityInput" placeholder="Search for a city..." />
-        <button id="locationBtn">Use my location</button>
-      </div>
-      <button id="themeToggle" class="theme-toggle">
-        <img
-          src="./photo/Group 13.svg"
-          alt="Light mode"
-          class="icon light-icon"
-        />
-        <img src="./photo/Group 2.svg" alt="Dark mode" class="icon dark-icon" />
-      </button>
-    </header>
-
-    <main>
-      <section class="weather">
-        <div class="weather__overview">
-          <div class="main-weather-block">
-            <article class="weather-card">
-              <h2 class="city-name">Kutaisi</h2>
-              <time class="current-date" datetime="2025-06-28"
-                >Wednesday, June 28, 2025</time
-              >
-              <h3 class="current-temperature">25&deg;C</h3>
-
-              <div class="main">  
-                <div class="first">
-                  <div class="weather-info">
-                    <img class="info-icon" src="./photo/Humidity.png" alt="Humidity" />
-                    <div class="info-content">
-                      <span class="info-label">Humidity</span>
-                      <span class="info-value">45%</span>
-                    </div>
-                  </div>
-
-                  <div class="weather-info">
-                    <img src="./photo/Wind.png" alt="Wind" />
-                    <div class="info-content">
-                      <span class="info-label">Wind</span>
-                      <span class="info-value">12 km/h</span>
-                    </div>
-                  </div>
-
-                  <div class="weather-info">
-                    <img src="./photo/Pressure.png" alt="Pressure" />
-                    <div class="info-content">
-                      <span class="info-label">Pressure</span>
-                      <span class="info-value">1014 hPa</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="second">
-                  <div class="weather-info">
-                    <img src="./photo/Feels like.png" alt="Feels like" />
-                    <div class="info-content">
-                      <span class="info-label">Feels like</span>
-                      <span class="info-value">26°C</span>
-                    </div>
-                  </div>
-
-                  <div class="weather-info">
-                    <img src="./photo/Sunrise.png" alt="Sunrise" />
-                    <div class="info-content">
-                      <span class="info-label">Sunrise</span>
-                      <span class="info-value">05:42 AM</span>
-                    </div>
-                  </div>
-
-                  <div class="weather-info">
-                    <img src="./photo/Sunset.png" alt="Sunset" />
-                    <div class="info-content">
-                      <span class="info-label">Sunset</span>
-                      <span class="info-value">08:57 PM</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <div class="decor-sun"></div>
-          </div>
+        <div class="search-bar">
+          <input type="text" id="cityInput" placeholder="Search for a city..." />
+          <button id="locationBtn">Use my location</button>
         </div>
+        <div id="loadingMessage" style="display:none; color: #007bff; margin-top: 10px;"></div>
+        <div id="errorMessage" style="display:none; color: red; margin-top: 10px;"></div>
+        <button id="themeToggle" class="theme-toggle">
+          <img
+            src="./photo/Group 13.svg"
+            alt="Light mode"
+            class="icon light-icon"
+          />
+          <img src="./photo/Group 2.svg" alt="Dark mode" class="icon dark-icon" />
+        </button>
+      </header>
 
-        <aside class="Weather-details">
-          <div class="svg-container">
-            <svg
+      <main>
+        <section class="weather">
+          <div class="weather__overview">
+            <div class="main-weather-block">
+              <article class="weather-card">
+                <h2 class="city-name"></h2>
+                <time class="current-date"></time>
+                  <h3 class="current-temperature"></h3>
+                  <img src="" alt="" class="current-temp_icon">
+
+
+                <div class="main">  
+                  <div class="first">
+                    <div class="weather-info">
+                      <img class="info-icon" src="./photo/Humidity.png" alt="Humidity" />
+                      <div class="info-content">
+                        <span class="info-label">Humidity</span>
+                        <span class="info-value"></span>
+                      </div>
+                    </div>
+
+                    <div class="weather-info">
+                      <img class="info-icon" src="./photo/Wind.png" alt="Wind" />
+                      <div class="info-content">
+                        <span class="info-label">Wind</span>
+                        <span class="info-value"></span>
+                      </div>
+                    </div>
+
+                    <div class="weather-info">
+                      <img class="info-icon" src="./photo/Pressure.png" alt="Pressure" />
+                      <div class="info-content">
+                        <span class="info-label">Pressure</span>
+                        <span class="info-value"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="second">
+                    <div class="weather-info">
+                      <img class="info-icon" src="./photo/Feels like.png" alt="Feels like" />
+                      <div class="info-content">
+                        <span class="info-label">Feels like</span>
+                        <span class="info-value"></span>
+                      </div>
+                    </div>
+
+                    <div class="weather-info">
+                      <img class="info-icon" src="./photo/Sunrise.png" alt="Sunrise" />
+                      <div class="info-content">
+                        <span class="info-label">Sunrise</span>
+                        <span class="info-value"></span>
+                      </div>
+                    </div>
+
+                    <div class="weather-info">
+                      <img class="info-icon" src="./photo/Sunset.png" alt="Sunset" />
+                      <div class="info-content">
+                        <span class="info-label">Sunset</span>
+                        <span class="info-value"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- <div class="decor-sun"></div> -->
+            </div>
+          </div>
+
+          <aside class="Weather-details">
+            <div class="svg-container">
+              <svg
               width="350"
               height="300"
               viewBox="0 0 337.83 341.82"
@@ -742,174 +754,52 @@
                 </g>
               </g>
             </svg>
-          </div>
 
-
-          <div class="text-details">
-            <h3 class="details-title">Wind and pressure</h3>
-            <div>
-              <span class="label">Wind speed:</span>
-              <span class="value">44 Kph, NW</span>
             </div>
 
-            <div>
-              <span class="label">Pressure:</span>
-              <span class="value">100.70 Kpa</span>
+            <div class="text-details">
+              <h3 class="details-title">Wind and pressure</h3>
+              <div>
+                <span class="label">Wind speed:</span>
+                <span class="value" id="wind-speed"></span>
+              </div>
+
+              <div>
+                <span class="label">Pressure:</span>
+                <span class="value" id="pressure"></span>
+              </div>
             </div>
-          </div>
-        </aside>
-      </section>
+          </aside>
+        </section>
 
         <section class="hourly-forecast">
-        <div class="forecast-header">
-          <h3 class="hourly-forecast-title">Hourly Forecast</h3>
-        </div>
-      
-        <div class="hourly-forecast-list">
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="00:00">Now</time>
-            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
-            <span class="forecast-item-temp">21°C</span>
+          <div class="forecast-header">
+            <h3 class="hourly-forecast-title">Hourly Forecast</h3>
           </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="12:00">12PM</time>
-            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
-            <span class="forecast-item-temp">25°C</span>
+        
+          <div class="hourly-forecast-list">
           </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="13:00">1PM</time>
-            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
-            <span class="forecast-item-temp">26°C</span>
+        </section>  
+        
+        <section class="forecast-section">
+          <div class="forecast-section-header">
+            <h2 class="forecast-section-title">Forecast</h2>
+            <div class="time-options">
+              <span class="time-options-item time-options__item--active" role="button" tabindex="0">5 Days</span>
+            </div>
           </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="14:00">2PM</time>
-            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
-            <span class="forecast-item-temp">26°C</span>
+        
+          <div class="daily-forecast-list">
           </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="15:00">3PM</time>
-            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
-            <span class="forecast-item-temp">25°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="16:00">4PM</time>
-            <img class="forecast-item-icon" src="./photo/snst cluub and moon.png" alt="Partly cloudy with moon" />
-            <span class="forecast-item-temp">24°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="17:00">5PM</time>
-            <img class="forecast-item-icon" src="./photo/cloud.png" alt="Cloudy weather" />
-            <span class="forecast-item-temp">23°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="18:00">6PM</time>
-            <img class="forecast-item-icon" src="./photo/cloud.png" alt="Cloudy weather" />
-            <span class="forecast-item-temp">22°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="19:00">7PM</time>
-            <img class="forecast-item-icon" src="./photo/cloud.png" alt="Cloudy weather" />
-            <span class="forecast-item-temp">21°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="20:00">8PM</time>
-            <img class="forecast-item-icon" src="./photo/cloud and moon.png" alt="Cloudy night" />
-            <span class="forecast-item-temp">20°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="21:00">9PM</time>
-            <img class="forecast-item-icon" src="./photo/cloud and moon.png" alt="Cloudy night" />
-            <span class="forecast-item-temp">19°C</span>
-          </div>
-        </div>
-      </section>  
-      
-      <section class="forecast-section">
-        <div class="forecast-section-header">
-          <h2 class="forecast-section-title">Forecast</h2> <div class="time-options">
-            <span class="time-options-item time-options__item--active" role="button" tabindex="0">1 Week</span>
-            <span class="time-options-item" role="button" tabindex="0">2 Weeks</span>
-            <span class="time-options-item" role="button" tabindex="0">1 Month</span>
-          </div>
-        </div>
-      
-        <div class="daily-forecast-list">
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="2025-06-30">Thu, Jun 29</time>
-            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
-            <span class="forecast-item-temp forecast-item__temp--day">25°C</span>
-            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="2025-06-30">Fri, Jun 30</time>
-            <img class="forecast-item-icon" src="./photo/cloud.png" alt="Cloudy weather" />
-            <span class="forecast-item-temp forecast-item__temp--day">25°C</span>
-            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="2025-07-01">Sat, Jul 1</time>
-            <img class="forecast-item-icon" src="./photo/rain.png" alt="Rainy weather" />
-            <span class="forecast-item-temp forecast-item__temp--day">26°C</span>
-            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="2025-07-02">Sun, Jul 2</time>
-            <img class="forecast-item-icon" src="./photo/rain.png" alt="Rainy weather" />
-            <span class="forecast-item-temp forecast-item__temp--day">26°C</span>
-            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="2025-07-03">Mon, Jul 3</time>
-            <img class="forecast-item-icon" src="./photo/cloud.png" alt="Cloudy weather" />
-            <span class="forecast-item-temp forecast-item__temp--day">25°C</span>
-            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="2025-07-04">Tue, Jul 4</time>
-            <img class="forecast-item-icon" src="./photo/snst cluub and moon.png" alt="Partly cloudy with moon" />
-            <span class="forecast-item-temp forecast-item__temp--day">24°C</span>
-            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="2025-07-05">Wed, Jul 5</time>
-            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
-            <span class="forecast-item-temp forecast-item__temp--day">23°C</span>
-            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
-          </div>
-      
-          <div class="forecast-item">
-            <time class="forecast-item-time" datetime="2025-07-05">Wed, Jul 5</time>
-            <img class="forecast-item-icon" src="./photo/sun.png" alt="Sunny weather" />
-            <span class="forecast-item-temp forecast-item__temp--day">22°C</span>
-            <span class="forecast-item-temp forecast-item__temp--night">18°C</span>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
 
-    <footer class="footer">
-      <span class="footer-credit">Powered by OpenWeatherMap</span>
-      <span class="footer-copyright"
-        >© 2025 WeatherNow. All rights reserved.</span
-      >
-    </footer>
-
-    <script src="./main.js"></script>
+      <footer class="footer">
+        <span class="footer-credit">Powered by OpenWeatherMap</span>
+         <span class="footer-copyright"
+         >© 2025 WeatherNow. All rights reserved.</span>  
+          </footer> 
+    </div>
+    <script src="./main.js" type="module"></script>
   </body>
 </html>
