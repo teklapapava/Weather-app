@@ -309,32 +309,32 @@ body.dark-mode .theme-toggle .dark-icon {
   .weather .weather__overview .main-weather-block .current-temperature {
     font-size: 40px;
   }
-  .weather .Weather-details {
+  .weather .weather__overview .Weather-details {
     width: 100%;
     height: auto;
     flex-direction: column;
     gap: 15px;
     padding: 15px;
   }
-  .weather .Weather-details .svg-container {
+  .weather .weather__overview .Weather-details .svg-container {
     width: 200px;
     height: 200px;
     margin-bottom: 90px;
   }
-  .weather .Weather-details .text-details {
+  .weather .weather__overview .Weather-details .text-details {
     width: 100%;
     text-align: center;
     padding: 0 10px;
   }
-  .weather .Weather-details .text-details h3.details-title {
+  .weather .weather__overview .Weather-details .text-details h3.details-title {
     font-size: 30px;
     margin-bottom: 15px;
   }
-  .weather .Weather-details .text-details div {
+  .weather .weather__overview .Weather-details .text-details div {
     justify-content: flex-start;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) and (max-width: 600px) {
   .weather .weather__overview {
     width: 100%;
   }
@@ -368,7 +368,7 @@ body.dark-mode .theme-toggle .dark-icon {
     line-height: 20px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 768px) and (max-width: 400px) {
   .weather .weather .weather__overview .main-weather-block .weather-card {
     padding: 5px;
   }
